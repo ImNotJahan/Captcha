@@ -45,7 +45,7 @@
     $white = imagecolorallocate($image, 255, 255, 255);
     $textcolors = [$black, $white];
     
-    $fonts = ["ransom.ttf", "eco.ttf"]; //the fonts that the captcha will use
+    $fonts = array_diff(scandir("fonts"), array('..', '.'));; //scans for the fonts that the captcha will use
     
     $stringLength = 7; //the length of the string
     
